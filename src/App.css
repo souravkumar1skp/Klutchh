@@ -1,0 +1,92 @@
+
+.bg{
+  background-image: url('D:\vs-code\webdev\Klutch\klutch\public\154129.jpg');
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-around;
+  height: fit-content;
+  /* border: 3px solid blue; */
+  border-radius: 5px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.large-box{
+  width: 690px;
+  border: 3px solid blue;
+  border-radius: 5px;
+}
+
+.player{
+  display: flex;
+  flex-direction: column;
+}
+
+.teams{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.small-box{
+  min-height: fit-content;
+  border: 3px solid blue;
+  border-radius: 5px;
+}
+
+.news{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
