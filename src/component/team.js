@@ -15,7 +15,7 @@ export default function RowCard() {
   return (
     <>
     <div className="teams">
-        <div>
+        <div className="player">
         {data1.map((page) => (
                 <Card row variant="outlined" sx={{ width: 260, bgcolor: 'background.body' }}>
                 <CardOverflow>
@@ -32,7 +32,7 @@ export default function RowCard() {
                   <Typography fontWeight="md" textColor="success.plainColor" mb={0.5}>
                     {page.name}
                   </Typography>
-                  <Typography level="body2">{page.credit}</Typography>
+                  <Typography level="body2">Credit : {page.credit}</Typography>
                 </CardContent>
                 <Divider />
                 <CardOverflow
@@ -53,23 +53,32 @@ export default function RowCard() {
               </Card>
               ))}
             </div>
+
+
+
         <div>{data2.map((page) => (
                 <Card row variant="outlined" sx={{ width: 260, bgcolor: 'background.body' }}>
                 <CardOverflow>
                   <AspectRatio ratio="1" sx={{ width: 90 }}>
+                    {page.image_url== null ? <img
+                      src="https://images.unsplash.com/photo-1507833423370-a126b89d394b?auto=format&fit=crop&w=90"
+                      srcSet="https://images.unsplash.com/photo-1507833423370-a126b89d394b?auto=format&fit=crop&w=90&dpr=2 2x"
+                      loading="lazy"
+                      alt=""
+                    />:
                     <img
                       src="https://images.unsplash.com/photo-1507833423370-a126b89d394b?auto=format&fit=crop&w=90"
                       srcSet="https://images.unsplash.com/photo-1507833423370-a126b89d394b?auto=format&fit=crop&w=90&dpr=2 2x"
                       loading="lazy"
                       alt=""
-                    />
+                    />}
                   </AspectRatio>
                 </CardOverflow>
                 <CardContent sx={{ px: 2 }}>
                   <Typography fontWeight="md" textColor="success.plainColor" mb={0.5}>
                     {page.name}
                   </Typography>
-                  <Typography level="body2">{page.credit}</Typography>
+                  <Typography level="body2">Credit: {page.credit}</Typography>
                 </CardContent>
                 <Divider />
                 <CardOverflow
